@@ -1,0 +1,4 @@
+- dotnet run
+- dotnet tool list -g
+- dotnet ef migrations add InitialCreate -s API -p Persistence
+-

@@ -2,3 +2,16 @@ sec02-walking skeleton part1 - api
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - creating the project using create-projects-scripts from student assetes
 - clean project from unnecessary code
+- Creating a domain entity
+- Adding an Entity Framework Db Context
+    - add Microsoft.EntityFrameworkCore.Sqlite package from nuget gallery to Persistence project
+- Creating an Entity Framework code first migration
+    - display global dotnet packages by:
+        dotnet tool list -g
+    - install/update dotnet-ef nuget package by:
+        dotnet tool install --global dotnet-ef --version 8.0.3
+    - check instalation by running: dotnet ef 
+    - add migrations by:
+        dotnet ef migrations add InitialCreate -s API -p Persistence
+    - add Microsoft.EntityFrameworkCore.Design packgage from nuget gallery to API project
+
