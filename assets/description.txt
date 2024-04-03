@@ -18,5 +18,6 @@ sec02-walking skeleton part1 - api
     - cd API => dotnet watch
 - Seeding data to the database
     - cd API => dotnet watch --no-load-reload
+- Adding an API Controller
 
 
