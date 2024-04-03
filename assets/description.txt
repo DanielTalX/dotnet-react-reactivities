@@ -14,4 +14,9 @@ sec02-walking skeleton part1 - api
     - add migrations by:
         dotnet ef migrations add InitialCreate -s API -p Persistence
     - add Microsoft.EntityFrameworkCore.Design packgage from nuget gallery to API project
+- Creating the database
+    - cd API => dotnet watch
+- Seeding data to the database
+    - cd API => dotnet watch --no-load-reload
+
 
