@@ -21,3 +21,7 @@ sec02-walking skeleton part1 - api
 - Adding an API Controller
 
 
+sec03-walking skeleton part2 - Client
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Creating the react project (using vite)
+    - https://vitejs.dev/guide/

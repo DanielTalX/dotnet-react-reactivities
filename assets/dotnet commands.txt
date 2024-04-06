@@ -3,3 +3,6 @@
 - dotnet ef migrations add InitialCreate -s API -p Persistence
 - dotnet watch
 - dotnet watch --no-load-reload
+
+
+npm config set registry https://registry.npmjs.org/
