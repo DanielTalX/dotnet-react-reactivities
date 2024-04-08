@@ -25,3 +25,8 @@ sec03-walking skeleton part2 - Client
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Creating the react project (using vite)
     - https://vitejs.dev/guide/
+- Fetching data From the API 
+    - using axios and CORS Policy
+- Semantic UI React
+    - https://react.semantic-ui.com/
+

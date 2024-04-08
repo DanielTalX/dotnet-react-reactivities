@@ -1,0 +1,12 @@
+npm config set registry https://registry.npmjs.org/
+
+0. install backend
+1. install client
+    a. cd Reactivities/client-app
+    b. npm i
+2. run backend
+    a. cd Reactivities/API
+    b. dotnet watch --no-load-reload
+3. run Client
+    a. cd Reactivities/client-app
+    b. npm run start
