@@ -30,3 +30,10 @@ sec03-walking skeleton part2 - Client
 - Semantic UI React
     - https://react.semantic-ui.com/
 
+
+sec04-Creating a CRUD application using the CQRS + Mediator pattern
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Clean architecture
+- CQRS
+- Creating the first Query handler
+    - add MediatR by Jimmy Bogard packgage from nuget gallery to Application project

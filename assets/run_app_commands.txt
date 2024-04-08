@@ -1,6 +1,10 @@
 npm config set registry https://registry.npmjs.org/
 
 0. install backend
+    a. Microsoft.EntityFrameworkCore.Sqlite package from nuget gallery to Persistence project
+    b. dotnet tool install --global dotnet-ef --version 8.0.3
+    c. Microsoft.EntityFrameworkCore.Design packgage from nuget gallery to API project
+    d. MediatR by Jimmy Bogard packgage from nuget gallery to Application project
 1. install client
     a. cd Reactivities/client-app
     b. npm i
