@@ -39,3 +39,4 @@ sec04-Creating a CRUD application using the CQRS + Mediator pattern
     - add MediatR by Jimmy Bogard packgage from nuget gallery to Application project
 - Thin controllers in the API
 - Adding a Details handler
+- Adding Create and Edit handlers
