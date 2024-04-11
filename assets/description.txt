@@ -42,3 +42,4 @@ sec04-Creating a CRUD application using the CQRS + Mediator pattern
 - Adding Create and Edit handlers
 - Adding AutoMapper
     - add AutoMapper.Extensions.Microsoft.DependencyInjection by Jimmy Bogard packgage from nuget gallery to Application project
+- Adding a Delete handler
