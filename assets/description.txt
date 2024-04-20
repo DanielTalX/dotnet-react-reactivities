@@ -53,4 +53,5 @@ sec05-Creating a CRUD app in React
 - Adding an Activity interface 
     - json to ts: https://transform.tools/json-to-typescript
 - Adding a Nav Bar
+- Creating an activity dashboard
 
