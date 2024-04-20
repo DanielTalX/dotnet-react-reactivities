@@ -1,0 +1,5 @@
+- Creating the react project (using vite)
+    - https://vitejs.dev/guide/
+- Semantic UI React
+    - https://react.semantic-ui.com/
+- json to ts: https://transform.tools/json-to-typescript
