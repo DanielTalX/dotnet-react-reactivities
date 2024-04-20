@@ -55,4 +55,5 @@ sec05-Creating a CRUD app in React
 - Adding a Nav Bar
 - Creating an activity dashboard
 - Creating an activity list
+- Creating a details view
 
