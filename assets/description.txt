@@ -45,3 +45,10 @@ sec04-Creating a CRUD application using the CQRS + Mediator pattern
 - Adding a Delete handler
 - Startup class housekeeping
 - Cancellellation tokens
+
+
+sec05-Creating a CRUD app in React
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Folder stucture in React
+- Adding an Activity interface 
+    - json to ts: https://transform.tools/json-to-typescript
