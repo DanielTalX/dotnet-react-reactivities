@@ -56,4 +56,6 @@ sec05-Creating a CRUD app in React
 - Creating an activity dashboard
 - Creating an activity list
 - Creating a details view
+- Creating an activity form
+- add, edit and delete an activity
 
