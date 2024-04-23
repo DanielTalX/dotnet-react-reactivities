@@ -59,3 +59,13 @@ sec05-Creating a CRUD app in React
 - Creating an activity form
 - add, edit and delete an activity
 
+
+sec06-Axios
+~~~~~~~~~~~
+- Configure Axios
+- Using generic types
+- Using Axios interceptors
+- Hooking up all our requests to the API
+- Adding loading indicators
+- Posting and Deleting data to the server
+
