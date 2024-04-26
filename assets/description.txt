@@ -69,3 +69,12 @@ sec06-Axios
 - Adding loading indicators
 - Posting and Deleting data to the server
 
+
+sec07-MobX
+~~~~~~~~~~
+- Introduce State management
+    - MobX
+    - MobX React Lite
+    - React Context
+- Setting up MobX
+
