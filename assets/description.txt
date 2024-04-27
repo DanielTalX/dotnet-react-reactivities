@@ -102,3 +102,11 @@ sec08-Routing
 - Adding a key to the route
 - Redirect after submission
 - Moving the home page outside of Nav
+
+
+sec09-Styling the User Interface
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Styling the activity list
+- Grouping the activities by date
+- Styling the list items
+
