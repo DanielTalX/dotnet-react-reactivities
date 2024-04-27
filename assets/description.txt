@@ -83,4 +83,5 @@ sec07-MobX
 - Selecting an Activity using MobX
 - Creating an Activity using MobX
 - Deleting an Activity using MobX
+- Using a js Map object to store the activities
 
