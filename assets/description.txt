@@ -77,4 +77,7 @@ sec07-MobX
     - MobX React Lite
     - React Context
 - Setting up MobX
+- MobX actions
+- Refactoring the app to use MobX
+- MobX strict mode
 
