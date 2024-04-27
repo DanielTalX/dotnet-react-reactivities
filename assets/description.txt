@@ -94,3 +94,4 @@ sec08-Routing
     - History
 - Installing & Setting up React-Router
 - adding routes & Outlet
+- adding nav links
