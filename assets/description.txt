@@ -111,4 +111,5 @@ sec09-Styling the User Interface
 - Styling the list items
 - Activity details page
 - Populating the detailed components
+- Adding the activity filter component
 
