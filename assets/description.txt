@@ -112,4 +112,5 @@ sec09-Styling the User Interface
 - Activity details page
 - Populating the detailed components
 - Adding the activity filter component
+- Styling the home page
 
