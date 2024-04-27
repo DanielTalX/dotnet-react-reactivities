@@ -93,3 +93,4 @@ sec08-Routing
     - React Router API
     - History
 - Installing & Setting up React-Router
+- adding routes & Outlet
