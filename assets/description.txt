@@ -81,4 +81,5 @@ sec07-MobX
 - Refactoring the app to use MobX
 - MobX strict mode
 - Selecting an Activity using MobX
+- Creating an Activity using MobX
 
