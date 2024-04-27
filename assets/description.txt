@@ -95,3 +95,5 @@ sec08-Routing
 - Installing & Setting up React-Router
 - adding routes & Outlet
 - adding nav links
+- Adding a details link
+- Getting an individual activity

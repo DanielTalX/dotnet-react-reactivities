@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { Grid, GridColumn } from 'semantic-ui-react'
 import { observer } from 'mobx-react-lite'
 import ActivityList from './ActivityList'
