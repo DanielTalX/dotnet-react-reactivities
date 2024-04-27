@@ -109,4 +109,6 @@ sec09-Styling the User Interface
 - Styling the activity list
 - Grouping the activities by date
 - Styling the list items
+- Activity details page
+- Populating the detailed components
 
