@@ -82,4 +82,5 @@ sec07-MobX
 - MobX strict mode
 - Selecting an Activity using MobX
 - Creating an Activity using MobX
+- Deleting an Activity using MobX
 
