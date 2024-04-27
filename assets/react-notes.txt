@@ -3,3 +3,7 @@
 - Semantic UI React
     - https://react.semantic-ui.com/
 - json to ts: https://transform.tools/json-to-typescript
+- MobX
+    - https://mobx.js.org/README.html
+- React-Router 
+    - https://reactrouter.com/en/main

@@ -85,3 +85,11 @@ sec07-MobX
 - Deleting an Activity using MobX
 - Using a js Map object to store the activities
 
+
+sec08-Routing
+~~~~~~~~~~~~~
+- Intro
+    - React-Router - https://reactrouter.com/en/main
+    - React Router API
+    - History
+- Installing & Setting up React-Router
