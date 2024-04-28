@@ -6,6 +6,7 @@ npm config set registry https://registry.npmjs.org/
     c. Microsoft.EntityFrameworkCore.Design packgage from nuget gallery to API project
     d. MediatR by Jimmy Bogard packgage from nuget gallery to Application project
     e. AutoMapper.Extensions.Microsoft.DependencyInjection by Jimmy Bogard packgage from nuget gallery to Application project
+    f. FluentValidation.AspNetCore by Jeremy Skinner package from nuget gallery to Application project
 1. install client
     a. cd Reactivities/client-app
     b. npm i

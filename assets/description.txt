@@ -114,3 +114,16 @@ sec09-Styling the User Interface
 - Adding the activity filter component
 - Styling the home page
 
+
+sec10-Error handling
+~~~~~~~~~~~~~~~~~~~~
+- goals:
+    - Validation
+    - handling HTTP Error Responces
+    - handling Execptions
+    - custom middleware
+    - using axios interceptors
+- Fluent Validation (backend)
+    - add FluentValidation.AspNetCore by Jeremy Skinner package from nuget gallery to Application project
+    - https://docs.fluentvalidation.net/en/latest/aspnet.html
+    - validate create & edit Activity endpoint
