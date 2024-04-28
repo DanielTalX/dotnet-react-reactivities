@@ -128,3 +128,4 @@ sec10-Error handling
     - https://docs.fluentvalidation.net/en/latest/aspnet.html
     - validate create & edit Activity endpoint
 - Handling API Error Responses
+- Handling Execptions
