@@ -129,3 +129,4 @@ sec10-Error handling
     - validate create & edit Activity endpoint
 - Handling API Error Responses
 - Handling Execptions
+- Prepering for setting up error handling in the client app
