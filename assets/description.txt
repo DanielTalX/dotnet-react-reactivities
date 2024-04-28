@@ -119,7 +119,7 @@ sec10-Error handling
 ~~~~~~~~~~~~~~~~~~~~
 - goals:
     - Validation
-    - handling HTTP Error Responces
+    - handling HTTP Error Responses
     - handling Execptions
     - custom middleware
     - using axios interceptors
@@ -127,3 +127,4 @@ sec10-Error handling
     - add FluentValidation.AspNetCore by Jeremy Skinner package from nuget gallery to Application project
     - https://docs.fluentvalidation.net/en/latest/aspnet.html
     - validate create & edit Activity endpoint
+- Handling API Error Responses
