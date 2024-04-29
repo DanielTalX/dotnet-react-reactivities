@@ -130,3 +130,7 @@ sec10-Error handling
 - Handling API Error Responses
 - Handling Execptions
 - Prepering for setting up error handling in the client app
+- Using an interceptor to handle API error responses
+- Adding a not found component
+- Handling 400 & 500 errors on the client
+- Handling the validation error from an invliad GUID
