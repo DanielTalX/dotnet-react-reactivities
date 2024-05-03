@@ -134,3 +134,11 @@ sec10-Error handling
 - Adding a not found component
 - Handling 400 & 500 errors on the client
 - Handling the validation error from an invliad GUID
+
+sec11-Forms
+~~~~~~~~~~~
+- goals:
+    - Forms with Formik - https://formik.org/
+    - Validation with Formik/Yup
+    - Creating reusable form inputs
+- reusable TextInput, TextArea, SelectInput & DateInput
