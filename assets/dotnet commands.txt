@@ -1,6 +1,7 @@
 - dotnet run
 - dotnet tool list -g
 - dotnet ef migrations add InitialCreate -s API -p Persistence
+- dotnet ef migrations add IdentityAdded -s API -p Persistence
 - dotnet watch
 - dotnet watch --no-load-reload
 

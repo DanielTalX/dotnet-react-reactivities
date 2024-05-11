@@ -142,3 +142,18 @@ sec11-Forms
     - Validation with Formik/Yup
     - Creating reusable form inputs
 - reusable TextInput, TextArea, SelectInput & DateInput
+
+sec12-Identity
+~~~~~~~~~~~~~~
+- goals:
+    - ASPNET Core Identity
+    - JWT Token Authentication
+    - Login/Register
+    - Authenticated requests
+- Adding a user entity
+    - add Microsoft.AspNetCore.Identity.EntityFrameworkCore by Jeremy Skinner package from nuget gallery to Domain project
+- Adding an IdentityDbContext
+    - add IdentityAdded migration by: 
+        dotnet ef migrations add IdentityAdded -s API -p Persistence
+- Configuring Identity in the Startup class
+- Adding seed users
