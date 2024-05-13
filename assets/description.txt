@@ -157,3 +157,14 @@ sec12-Identity
         dotnet ef migrations add IdentityAdded -s API -p Persistence
 - Configuring Identity in the Startup class
 - Adding seed users
+- Creating the user DTOs
+- Adding an account controller
+- Creating a token service
+    - add System.IdentityModel.Tokens.Jwt by Microsoft package from nuget gallery to API project
+    - https://passwordgenerator.net/
+    - https://jwt.ms/
+- Authenticating to the app
+    - add Microsoft.AspNetCore.Authentication.JwtBearer by Microsoft package from nuget gallery to API project
+- Storing secrets in development
+
+
