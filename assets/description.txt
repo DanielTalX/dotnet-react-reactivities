@@ -166,5 +166,10 @@ sec12-Identity
 - Authenticating to the app
     - add Microsoft.AspNetCore.Authentication.JwtBearer by Microsoft package from nuget gallery to API project
 - Storing secrets in development
+    - https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-8.0&tabs=windows
+- Creating an auth Policy
+- Registering new users
+- Validating the Registeration of users
+- Getting the current user
 
 
