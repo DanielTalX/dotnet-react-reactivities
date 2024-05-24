@@ -173,3 +173,21 @@ sec12-Identity
 - Getting the current user
 
 
+sec13-Client Side Login And Registeration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- goals:
+    - Axios interceptors
+    - MobX reactions
+    - Form submission errors
+    - Modals
+- Creating login form
+- Creating the interfaces and methods
+- Creating a user store
+- Displaying errors in the form
+- Setting the token upon login
+- Updateting the home page and nav bar
+- Persisting the login
+- Sending the toekn with the request
+- Adding Modals
+- Adding the register form
+- Handling validation errors in the register form
