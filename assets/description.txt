@@ -191,3 +191,14 @@ sec13-Client Side Login And Registeration
 - Adding Modals
 - Adding the register form
 - Handling validation errors in the register form
+
+
+sec14-Entity Framework Relationships
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- goals:
+    - EF Relationships
+    - loading related entities
+    - AutoMapper queryable Extensions
+    - Adding an infrastructure project
+- Configuring the new relationship (Activity, AppUser, ActivityAttendee)
+    - add migrations by: dotnet ef migrations add ActivityAttendee -s API -p Persistence
