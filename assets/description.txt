@@ -202,3 +202,23 @@ sec14-Entity Framework Relationships
     - Adding an infrastructure project
 - Configuring the new relationship (Activity, AppUser, ActivityAttendee)
     - add migrations by: dotnet ef migrations add ActivityAttendee -s API -p Persistence
+- Adding an infrastructure project
+    - creaet new class library: 
+        - cd Reactivities/
+        - dotnet new classlib -n Infrastructure
+    - add infrastructure project to soultion: 
+        - dotnet sln add Infrastructure
+    - the infrastructure project is going to need a reference to our application project,
+        and it's going to need to be able to access the classes inside our application project.
+        - cd Reactivities/Infrastructure
+        - dotnet add reference ../Application
+    - the API project is going to need access to our infrastructure project.
+        - cd Reactivities/API
+        - dotnet add reference ../Infrastructure
+    - go to file: /Reactivities/Infrastructure/Infrastructure.csproj and set Nullable in PropertyGroup to disable.
+    - we're going to want to access the services of Infrastructure project frpm inside our application project, 
+        but our application project does not have a Dependency on the infrastructure project.
+        So in order to use the Infrastructure's services we're going to create inside our infrastructure project,
+        we're going to need an interface in our application to do so.
+        - mkdir Reactivities/Application/Interfaces
+

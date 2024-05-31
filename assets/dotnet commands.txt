@@ -5,6 +5,9 @@
 - dotnet ef migrations add ActivityAttendee -s API -p Persistence
 - dotnet watch
 - dotnet watch --no-load-reload
+- dotnet new classlib -n Infrastructure
+- dotnet sln add Infrastructure
+- dotnet add reference ../Application
 
 
 npm config set registry https://registry.npmjs.org/
