@@ -203,7 +203,7 @@ sec14-Entity Framework Relationships
 - Configuring the new relationship (Activity, AppUser, ActivityAttendee)
     - add migrations by: dotnet ef migrations add ActivityAttendee -s API -p Persistence
 - Adding an infrastructure project
-    - creaet new class library: 
+    - create new class library: 
         - cd Reactivities/
         - dotnet new classlib -n Infrastructure
     - add infrastructure project to soultion: 
@@ -221,4 +221,6 @@ sec14-Entity Framework Relationships
         So in order to use the Infrastructure's services we're going to create inside our infrastructure project,
         we're going to need an interface in our application to do so.
         - mkdir Reactivities/Application/Interfaces
+- Updateting the create activity handler
+- Testing the create activity
 
