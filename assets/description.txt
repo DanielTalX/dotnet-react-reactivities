@@ -223,4 +223,10 @@ sec14-Entity Framework Relationships
         - mkdir Reactivities/Application/Interfaces
 - Updateting the create activity handler
 - Testing the create activity
+- Loading related data
+    - https://learn.microsoft.com/en-us/ef/core/querying/related-data/
+    - https://learn.microsoft.com/en-us/ef/ef6/querying/related-data
+    - Eagerly Loading / Lazy Loading  / Explicitly Loading
+- Shaping the related data
+- Configuring AutoMapper profiles
 
