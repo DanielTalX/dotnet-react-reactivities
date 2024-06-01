@@ -242,4 +242,5 @@ sec15-Feature-Client side attendance
 - Adding the attendances component
 - Updateting the details component
 - Conditionally rendering the buttons
+- Adding the store methods to attend
 
