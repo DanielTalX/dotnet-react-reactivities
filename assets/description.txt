@@ -241,3 +241,5 @@ sec15-Feature-Client side attendance
 - goals: implement the attendance feature in the client app
 - Adding the attendances component
 - Updateting the details component
+- Conditionally rendering the buttons
+
