@@ -229,4 +229,9 @@ sec14-Entity Framework Relationships
     - Eagerly Loading / Lazy Loading  / Explicitly Loading
 - Shaping the related data
 - Configuring AutoMapper profiles
+- Adding the attendance handler
+    - dotnet ef migrations add AddCancelledProperty -p Persistence -s API 
+- Adding a custom auth policy
+- Updateting the seed data
+    - drop database & restart
 
