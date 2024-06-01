@@ -243,4 +243,8 @@ sec15-Feature-Client side attendance
 - Updateting the details component
 - Conditionally rendering the buttons
 - Adding the store methods to attend
+- Updateting the create and edit methods
+- Adding a cancel activity method
+- Adding a popover for attendances
+- Adding a popover for attendees
 
