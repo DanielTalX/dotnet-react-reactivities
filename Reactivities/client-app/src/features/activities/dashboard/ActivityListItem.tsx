@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Item, Button, Icon, Segment } from "semantic-ui-react";
 import { format } from "date-fns";
 import { Activity } from "../../../app/models/activity";
+import ActivityListItemAttendence from "./ActivityListItemAttendence";
 
 interface Props {
   activity: Activity;
@@ -27,7 +28,9 @@ export default function ActivityListItem({ activity }: Props) {
           <Icon name="marker" /> {activity.venue}
         </span>
       </Segment>
-      <Segment secondary>Attendees go here</Segment>
+      <Segment secondary>
+        <ActivityListItemAttendence attendees={activity.attendees!} />
+      </Segment>
       <Segment clearing>
         <span>{activity.description}</span>
         <Button
