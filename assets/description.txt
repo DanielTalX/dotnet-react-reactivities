@@ -248,3 +248,22 @@ sec15-Feature-Client side attendance
 - Adding a popover for attendances
 - Adding a popover for attendees
 
+sec16-API image upload
+~~~~~~~~~~~~~~~~~~~~~~
+- goals: 
+    - Photo Storage options
+    - Adding a photho upload service
+    - Using the Cloudinary API
+- Adding Cloudinary
+    - CloudinaryDotNet @Cloudinary
+- Adding the Cloudinary interfaces
+- Adding the add phto logic
+- Adding the Photo entity
+    - dotnet ef migrations add PhotoEntityAdded -p Persistence -s API
+- Adding the Add photo handler
+- Adding a photos controller
+- Deleting photos
+- Setting the main photo
+- Returning user profiles
+- Updateting the mapping configurtion
+- Returning an attendee DTO
