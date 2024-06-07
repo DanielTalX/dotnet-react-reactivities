@@ -267,3 +267,21 @@ sec16-API image upload
 - Returning user profiles
 - Updateting the mapping configurtion
 - Returning an attendee DTO
+
+
+sec17-Client image upload
+~~~~~~~~~~~~~~~~~~~~~~~~~
+- goals: 
+    - Adding a profile page
+    - Displaying user photos
+    - Adding a photo upload widget
+    - React dropzone
+    - React cropper
+    - Setting main photo
+    - Deleting photos
+- Creating a profile page
+- Adding a profile header
+- Adding the profile content
+- Getting the profile data
+- Getting the profile data part 2
+

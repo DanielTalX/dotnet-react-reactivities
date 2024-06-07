@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Item, Button, Icon, Segment, Label } from "semantic-ui-react";
+import { Item, Button, Icon, Segment, Label, List } from "semantic-ui-react";
 import { format } from "date-fns";
 import { Activity } from "../../../app/models/activity";
 import ActivityListItemAttendence from "./ActivityListItemAttendence";
@@ -16,10 +16,11 @@ export default function ActivityListItem({ activity }: Props) {
           <Label attached='top' color='red' content='Cancelled' style={{ textAlign: 'center' }} />}
         <Item.Group>
           <Item>
-            <Item.Image style={{marginBottom: 5}} size="tiny" circular src="/assets/user.png" />
+            <Item.Image style={{marginBottom: 5}} size="tiny" circular 
+              src={ activity.host?.image ||  "/assets/user.png"} />
             <Item.Content>
               <Item.Header as="a">{activity.title}</Item.Header>
-              <Item.Description>Hosted by { activity.host?.displayName }</Item.Description>
+              <Item.Description>Hosted by <Link to={`/profiles/${activity.host?.username}`}>{ activity.host?.displayName }</Link></Item.Description>
               { activity.isHost && (
                 <Item.Description>
                   <Label basic color="orange">
