@@ -294,3 +294,19 @@ sec17-Client image upload
 - Setting the main photo
 - Deleting photos 
 
+
+sec18-Challenge-Edit profile feature
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- API 
+    - Edit handler to update the profile
+    - Update the ProfilesController and add an endpoint for editing the profile
+- Postman
+    - Test the endpoint in Postman using the 3 requests in the Module 18 folder
+- Client
+    - Add a new request in the agent.ts
+    - Add a helper method in the user store to set the display name
+    - Add a method to update the profile in the profile store
+    - Create a Profile Edit form component in the Profiles feature folder
+    - Create a ProfileAbout component that will make use of the form
+    - Update the ProfileContent component to display the profile
+    - Update the Profile Card to show the user bio
