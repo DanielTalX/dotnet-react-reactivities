@@ -10,15 +10,13 @@ interface Props {
     profile: Profile
 }
 
-enum AddPhotoMode {
-    "View",
-    "AddPhoto",
-    "AddFakePhoto"
-}
+enum AddPhotoMode { "View", "AddPhoto", "AddFakePhoto" }
 
 export default observer(function ProfilePhotos({ profile }: Props) {
-  const { profileStore: { isCurrentUser, loading, uploadPhoto, uploadFakePhoto, uploading } } = useStore();
-  const [addPhotoMode, setAddPhotoMode] = useState<AddPhotoMode>(AddPhotoMode.View);
+  const { profileStore: { isCurrentUser, loading, uploading, uploadPhoto, 
+    uploadFakePhoto, setMainPhoto, deletePhoto } } = useStore();
+  const [addPhotoMode, setAddPhotoMode] = useState(AddPhotoMode.View);
+  const [target, setTarget] = useState('');
 
   function handlePhotoUpload(file: any) {
     uploadPhoto(file).then(() => setAddPhotoMode(AddPhotoMode.View));
@@ -27,6 +25,16 @@ export default observer(function ProfilePhotos({ profile }: Props) {
   function handleFakePhotoUpload(fakePhoto: FakePhoto) {
     uploadFakePhoto(fakePhoto).then(() => setAddPhotoMode(AddPhotoMode.View));
   }
+
+  function handleSetMain(photo: Photo, e: SyntheticEvent<HTMLButtonElement>) {
+    setTarget(e.currentTarget.name);
+    setMainPhoto(photo);
+}
+
+function handleDeletePhoto(photo: Photo, e: SyntheticEvent<HTMLButtonElement>) {
+    setTarget(e.currentTarget.name);
+    deletePhoto(photo);
+}
 
   return (
     <Tab.Pane>
@@ -67,6 +75,28 @@ export default observer(function ProfilePhotos({ profile }: Props) {
                             <Card.Group itemsPerRow={5}> {profile.photos?.map(photo => (
                                 <Card key={photo.id}>
                                     <Image src={photo.url} />
+                                    {isCurrentUser && (
+                                        <Button.Group fluid widths={2}>
+                                            <Button
+                                                basic
+                                                color='green'
+                                                content='Main'
+                                                name={'main' + photo.id}
+                                                loading={target === 'main' + photo.id && loading}
+                                                disabled={photo.isMain}
+                                                onClick={e => handleSetMain(photo, e)}
+                                            />
+                                            <Button
+                                                name={photo.id}
+                                                loading={loading && photo.id === target}
+                                                onClick={(e) => handleDeletePhoto(photo, e)}
+                                                basic
+                                                color='red'
+                                                icon='trash'
+                                                disabled={photo.isMain}
+                                            />
+                                        </Button.Group>
+                                    )}
                                 </Card>
                             ))}
                             </Card.Group>

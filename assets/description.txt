@@ -291,4 +291,6 @@ sec17-Client image upload
 - Styling the Dropzone
 - Adding a react cropper
 - Adding the photo upload method
+- Setting the main photo
+- Deleting photos 
 
