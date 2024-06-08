@@ -286,4 +286,9 @@ sec17-Client image upload
 - Getting the profile data part 2
 - Displaying the photos
 - Conditionally rendering the photo widget
+- Creating a photo upload widget
+- Adding a Dropzone
+- Styling the Dropzone
+- Adding a react cropper
+- Adding the photo upload method
 

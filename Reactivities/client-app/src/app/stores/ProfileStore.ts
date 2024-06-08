@@ -1,4 +1,4 @@
-import {Photo, Profile} from "../models/profile";
+import {FakePhoto, Photo, Profile} from "../models/profile";
 import {makeAutoObservable, runInAction} from "mobx";
 import agent from "../api/agent";
 import {toast} from "react-toastify";
@@ -7,6 +7,7 @@ import { store } from "./store";
 export default class ProfileStore {
     profile: Profile | null = null;
     loadingProfile = false;
+    uploading = false;
     loading = false;
 
     constructor() {
@@ -33,6 +34,47 @@ export default class ProfileStore {
             runInAction(() => {
                 this.loadingProfile = false;
             })
+        }
+    }
+
+    uploadPhoto = async (file: any) => {
+        this.uploading = true;
+        try {
+            const response = await agent.Profiles.uploadPhoto(file);
+            const photo = response.data;
+            runInAction(() => {
+                if (this.profile) {
+                    this.profile.photos?.push(photo);
+                    if (photo.isMain && store.userStore.user) {
+                        store.userStore.setImage(photo.url);
+                        this.profile.image = photo.url;
+                    }
+                }
+                this.uploading = false;
+            })
+        } catch (error) {
+            console.log(error);
+            runInAction(() => this.uploading = false);
+        }
+    }
+
+    uploadFakePhoto = async (fakePhoto: FakePhoto) => {
+        this.uploading = true;
+        try {
+            const photo = await agent.Profiles.uploadFakePhoto(fakePhoto);
+            runInAction(() => {
+                if (this.profile) {
+                    this.profile.photos?.push(photo);
+                    if (photo.isMain && store.userStore.user) {
+                        store.userStore.setImage(photo.url);
+                        this.profile.image = photo.url;
+                    }
+                }
+                this.uploading = false;
+            })
+        } catch (error) {
+            console.log(error);
+            runInAction(() => this.uploading = false);
         }
     }
 
