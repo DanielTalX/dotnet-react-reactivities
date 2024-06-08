@@ -310,3 +310,17 @@ sec18-Challenge-Edit profile feature
     - Create a ProfileAbout component that will make use of the form
     - Update the ProfileContent component to display the profile
     - Update the Profile Card to show the user bio
+
+    
+sec19-SignalR
+~~~~~~~~~~~~~~
+- Introduction
+    - what is SignalR
+    - SignalR transports
+    - SignalR client package
+- Setting up the comment entity
+    - dotnet ef migrations add CommentEntityAdded -p Persistence -s API
+- Adding a comment DTO and mapping
+- Adding the create handler
+- Adding a list handler
+
