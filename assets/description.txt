@@ -323,4 +323,6 @@ sec19-SignalR
 - Adding a comment DTO and mapping
 - Adding the create handler
 - Adding a list handler
+- Adding a SignalR Hub
+- Authenticating to SignalR
 
