@@ -325,4 +325,9 @@ sec19-SignalR
 - Adding a list handler
 - Adding a SignalR Hub
 - Authenticating to SignalR
+- Adding SignalR to the client
+- Connecting to the hub
+- Sending comments
+- Adding validation and fix issues
+- Resolving UTC dates
 
