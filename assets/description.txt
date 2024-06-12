@@ -341,3 +341,5 @@ Sec20-Followers-Following_feature
     - dotnet ef migrations add FollowingEntityAdded -p Persistence -s API
 - Adding a handler for following
 - Adding the controller
+- Update the profile class
+- Return a list of followers
