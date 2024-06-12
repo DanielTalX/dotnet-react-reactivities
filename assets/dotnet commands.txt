@@ -5,6 +5,7 @@
 - dotnet ef migrations add ActivityAttendee -s API -p Persistence
 - dotnet ef migrations add PhotoEntityAdded -p Persistence -s API
 - dotnet ef migrations add CommentEntityAdded -p Persistence -s API
+- dotnet ef migrations add FollowingEntityAdded -p Persistence -s API
 - dotnet watch
 - dotnet watch --no-load-reload
 - dotnet new classlib -n Infrastructure
