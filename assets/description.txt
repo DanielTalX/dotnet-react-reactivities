@@ -343,3 +343,5 @@ Sec20-Followers-Following_feature
 - Adding the controller
 - Update the profile class
 - Return a list of followers
+- Adding the following property to the mapping configuration
+- Updating the other handlers with the following property
