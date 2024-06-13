@@ -339,9 +339,16 @@ Sec20-Followers-Following_feature
     - Self referencing many to many relationship
 - Adding a join entity
     - dotnet ef migrations add FollowingEntityAdded -p Persistence -s API
+    - dotnet ef migrations script -o test.sql -p Persistence -s API
 - Adding a handler for following
 - Adding the controller
 - Update the profile class
 - Return a list of followers
 - Adding the following property to the mapping configuration
 - Updating the other handlers with the following property
+- Adding the Ul for followers
+- Adding methods to follow and unfollow
+- Making the follow button a component
+- Getting a list of followings
+- Using MobX Reactions
+
