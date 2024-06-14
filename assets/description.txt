@@ -352,3 +352,19 @@ Sec20-Followers-Following_feature
 - Getting a list of followings
 - Using MobX Reactions
 
+
+Sec21-Paging-Sorting-Filtering
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- goals
+    - Paging on the API & Client
+    - Sorting on the API & Client
+    - Filtering on the API & Client
+    - IQueryable< T>
+- Adding a PagedList class
+- Adding application layer pagination logic
+- Adding a pagination header
+- Adding client side pagination
+- Adding pagination parameters
+- Adding vertical paging
+- Adding infinite scrolling
+
