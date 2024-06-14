@@ -371,4 +371,6 @@ Sec21-Paging-Sorting-Filtering
 - Client side filtering
 - Updating the filter component
 - Adding placeholders
+- Adding a user profile activities component + challenge
+- Challenge solution
 

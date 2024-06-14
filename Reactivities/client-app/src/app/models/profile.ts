@@ -37,3 +37,10 @@ export interface Photo {
 export interface FakePhoto {
     Url: string;
 }
+
+export interface UserActivity {
+    id: string;
+    title: string;
+    category: string;
+    date: Date;
+}
