@@ -4,9 +4,9 @@ import { observer } from 'mobx-react-lite'
 import InfiniteScroll from 'react-infinite-scroller';
 import ActivityList from './ActivityList'
 import { useStore } from '../../../app/stores/store'
-import LoadingComponent from '../../../app/layout/LoadingComponent'
 import ActivityFilters from './ActivityFilters'
 import { PagingParams } from '../../../app/models/pagination'
+import ActivityListItemPlaceholder from './ActivityListItemPlaceholder';
 
 
 const ActivityDashboard = () => {
@@ -24,18 +24,25 @@ const ActivityDashboard = () => {
     if(activityRegistry.size <= 1) loadActivities();
   }, [activityRegistry, activityStore])
 
-  if(activityStore.loadingInitial && !loadingNext) return <LoadingComponent content='Loading App' />
+  //if(activityStore.loadingInitial && !loadingNext) return <LoadingComponent content='Loading App' />
 
   return (
     <Grid>
         <GridColumn width='10' >
-          <InfiniteScroll
-            pageStart={0}
-            loadMore={handleGetNext}
-            hasMore={!loadingNext && !!pagination && pagination.currentPage < pagination.totalPages}
-            initialLoad={false}>
-            <ActivityList />
-        </InfiniteScroll>
+          {activityStore.loadingInitial && activityRegistry.size === 0 && !loadingNext ? (
+            <>
+              <ActivityListItemPlaceholder />
+              <ActivityListItemPlaceholder />
+            </>
+          ) : (
+            <InfiniteScroll
+              pageStart={0}
+              loadMore={handleGetNext}
+              hasMore={!loadingNext && !!pagination && pagination.currentPage < pagination.totalPages}
+              initialLoad={false}>
+              <ActivityList />
+            </InfiniteScroll>
+          )}
         </GridColumn>
         <GridColumn width='6'>
           <ActivityFilters />

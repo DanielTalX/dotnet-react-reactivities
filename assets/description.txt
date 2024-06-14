@@ -367,4 +367,8 @@ Sec21-Paging-Sorting-Filtering
 - Adding pagination parameters
 - Adding vertical paging
 - Adding infinite scrolling
+- Adding filtering in the API
+- Client side filtering
+- Updating the filter component
+- Adding placeholders
 
