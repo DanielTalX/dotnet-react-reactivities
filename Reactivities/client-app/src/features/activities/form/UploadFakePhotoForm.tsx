@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { Button, Card, Grid, Header, Image, Segment } from "semantic-ui-react";
+import { useState } from "react";
+import { Button, Card, Grid, Image, Segment } from "semantic-ui-react";
 import { observer } from "mobx-react-lite";
 import { Formik, Form } from "formik";
 import * as Yup from 'yup';

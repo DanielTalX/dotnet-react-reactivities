@@ -1,4 +1,4 @@
-import {Tab, Grid, Header, Card} from "semantic-ui-react";
+import {TabPane, Grid, Header, Card} from "semantic-ui-react";
 import ProfileCard from "./ProfileCard";
 import {useStore} from "../../app/stores/store";
 import { observer } from 'mobx-react-lite';
@@ -8,7 +8,7 @@ export default observer(function ProfileFollowings() {
     const {profile, followings, loadingFollowings, activeTab} = profileStore;
 
     return (
-        <Tab.Pane loading={loadingFollowings}>
+        <TabPane loading={loadingFollowings}>
             <Grid>
                 <Grid.Column width='16'>
                     <Header
@@ -27,6 +27,6 @@ export default observer(function ProfileFollowings() {
                     </Card.Group>
                 </Grid.Column>
             </Grid>
-        </Tab.Pane>
+        </TabPane>
     )
 })

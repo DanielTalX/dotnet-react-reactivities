@@ -374,3 +374,35 @@ Sec21-Paging-Sorting-Filtering
 - Adding a user profile activities component + challenge
 - Challenge solution
 
+
+Sec22-Finishing_touches_and_publishing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Introduction
+    - ScrollTo Top
+    - Client side route protection
+    - Build the react app for production
+    - Switching to a "production" DB
+    - Publishing to Heroku
+    - Getting an "A" grade on securityheaders.com
+- Adding Scroll to top for our routes
+- Adding private routes
+- Prepping the client app for production
+    - https://vitejs.dev/guide/env-and-mode
+- Building the production build of the react app
+    - https://vitejs.dev/guide/build.html
+    a. cd Reactivities/client-app
+    b. npm run build
+- Running the client app on the dotnet Kestrel server
+    a. cd Reactivities/API
+    b. dotnet run
+- Adding PostGresQL
+    - install docker
+    - cd Reactivities
+    - docker run --name reactivities_db_dev -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=secret -p 5432:5432 -d postgres:latest
+- Switching to PostGresQL
+    - https://learn.microsoft.com/en-us/ef/core/providers/?tabs=dotnet-core-cli
+    - add Npgsql.EntityFrameworkCore.PostgreSQL package from nuget gallery to Persistence project
+    - dotnet ef database drop -s API -p Persistence
+    - dotnet ef migrations add SqliteInitial -p Persistence -s API
+    - dotnet ef migrations add PostgresInitial -p Persistence -s API
+

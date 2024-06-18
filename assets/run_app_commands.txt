@@ -7,6 +7,15 @@ npm config set registry https://registry.npmjs.org/
     d. MediatR by Jimmy Bogard packgage from nuget gallery to Application project
     e. AutoMapper.Extensions.Microsoft.DependencyInjection by Jimmy Bogard packgage from nuget gallery to Application project
     f. FluentValidation.AspNetCore by Jeremy Skinner package from nuget gallery to Application project
+0. drop database:
+    a. cd Reactivities 
+    b. dotnet ef database drop -s API -p Persistence
+0. run PostGresQL in docker:
+    a. cd Reactivities
+    b. docker run --name reactivities_db_dev -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=secret -p 5432:5432 -d postgres:latest
+0. Switching Sqlite <-> PostGresQL:
+    a. ApplicationServiceExtensions
+    b. appsettings.Development.json
 1. install client
     a. cd Reactivities/client-app
     b. npm i
@@ -16,6 +25,9 @@ npm config set registry https://registry.npmjs.org/
 3. run Client
     a. cd Reactivities/client-app
     b. npm run start
-4. drop database:
-    a. cd Reactivities 
-    b. dotnet ef database drop -s API -p Persistence
+4. build client to production:
+    a. cd Reactivities/client-app
+    b. npm run build
+4. run production mode (both backend & client)
+    a. cd Reactivities/API
+    b. dotnet run

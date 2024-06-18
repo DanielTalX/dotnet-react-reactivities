@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite";
 import { SyntheticEvent, useState } from "react";
-import { Card, Header, Tab, Image, Grid, Button } from "semantic-ui-react";
+import { Card, Header, TabPane, Image, Grid, Button } from "semantic-ui-react";
 import PhotoUploadWidget from "../../app/common/imageUpload/PhotoUploadWidget";
 import { FakePhoto, Photo, Profile } from "../../app/models/profile";
 import { useStore } from "../../app/stores/store";
@@ -37,7 +37,7 @@ function handleDeletePhoto(photo: Photo, e: SyntheticEvent<HTMLButtonElement>) {
 }
 
   return (
-    <Tab.Pane>
+    <TabPane>
       <Grid>
       <Grid.Column width='16'>
             <Header floated='left' icon='image' content='Photos' />
@@ -108,6 +108,6 @@ function handleDeletePhoto(photo: Photo, e: SyntheticEvent<HTMLButtonElement>) {
             }
         </Grid.Column>
       </Grid>
-    </Tab.Pane>
+    </TabPane>
   );
 });
