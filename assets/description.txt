@@ -485,3 +485,9 @@ Sec22-Finishing_touches_and_publishing
     - git push heroku main
     - to see logs in heroku: go to the app in heroku and click more -> view logs
 
+- Security tightening
+    - https://securityheaders.com/
+    - add a nuget package:
+        - add NWebsec.AspNetCore.Middleware @André N. Klingsheim packgage from nuget gallery to API project
+- Content security policies
+

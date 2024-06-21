@@ -24,10 +24,39 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 app.UseMiddleware<ExceptionMiddleware>();
+
+// prevent mime sniffing of the content type
+app.UseXContentTypeOptions();
+// refres to the referrer policy thar allows a site ti control how much information
+// the browser includes when navigating away from our app
+app.UseReferrerPolicy(opt => opt.NoReferrer());
+// cross-site scripting protection header
+app.UseXXssProtection(opt => opt.EnabledWithBlockMode());
+// prevent our application being used inside an iframe which protects against that click jacking
+app.UseXfo(opt => opt.Deny());
+// our main defense against cross-site scripting attacks because this allows us to white source approve content
+app.UseCsp(opt => opt
+    .BlockAllMixedContent()
+    .StyleSources(s => s.Self().CustomSources("https://fonts.googleapis.com"))
+    .FontSources(s => s.Self().CustomSources("https://fonts.gstatic.com", "data:"))
+    .FormActions(s => s.Self())
+    .FrameAncestors(s => s.Self())
+    //.ImageSources(s => s.Self().CustomSources("blob:", "https://res.cloudinary.com"))
+    .ScriptSources(s => s.Self())
+);
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+}
+else 
+{
+    app.Use(async (context, next) => 
+    {
+        context.Response.Headers.Add("Strict-Transport-Security", "max-age=31536000");
+        await next.Invoke();
+    });
 }
 
 app.UseCors("CorsPolicy");
