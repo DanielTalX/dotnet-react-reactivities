@@ -406,3 +406,82 @@ Sec22-Finishing_touches_and_publishing
     - dotnet ef migrations add SqliteInitial -p Persistence -s API
     - dotnet ef migrations add PostgresInitial -p Persistence -s API
 
+- https://fly.io/
+    - https://fly.io/docs/about/pricing/
+    - https://fly.io/docs/languages-and-frameworks/
+- Deployment to flyio - Dockerise the app
+    - docker build -t mydockerid/reactivities .
+    - docker run -rm -it -p 8080:80 mydockerid/reactivities
+- Deployment to flyio - updating the config to use docker postgres
+    - https://hub.docker.com/
+    - docker push mydockerid/reactivities:latest
+- Deployment to flyio - using fly launch to create deploy config
+    - https://fly.io/docs/getting-started/launch-demo/
+    - brew install flyctl
+    - fly auth signup
+    - fly auth login
+    - fly launch --image mydockerid/reactivities:latest
+        - app name: reactivities-danix
+        - choose a region
+        - setup Postgresql: yes
+            - development
+            - save given: username, password, hostname, proxy port, postgres port, connection string
+        - redis db: no
+        - deploy: no
+- Deploy to flyio - creating the config variables and secrets & Resources
+    - update fly.toml file in env section according to appsettings.json
+    - in order to store secrets:
+        - terminal: fly secrets list
+        - strog password generator: 
+            - https://delinea.com/
+            - https://delinea.com/resources/password-generator-it-tool
+        - fly secrets set TokenKey=MySecretTokenKey
+        - fly secrets set Cloudinary__ApiKey=MySecretCloudinary__ApiKey
+    - add expose 8080 in dockerfile
+    - docker build -t mydockerid/reactivities .
+    - docker push mydockerid/reactivities:latest
+    - fly deploy
+- Deployment to flyio - creating a github action
+- Deployment to flyio - Automatic deployment with github actions
+    - https://fly.io/docs/app-guides/continuous-deployment-with-github-actions/
+    - to get the logs from the production remote app
+        - fly logs
+        - fly app list
+        - fly app -a reactivities_course
+    - to get FLY_API_TOKEN from github
+        - fly auth token
+    - to connect the remote db:
+        - fly app list
+        - fly proxy 6543:5432 -a reactivities_db_dev    (6543 for local portm 5432 for the remote port)
+
+- Heroku no longer providing a free service
+- Setting up Heroku
+    - create a new app in Heroku website - name: reactivities
+    - in Reactivities project (terminal)
+        - heroku login
+        - heroku git:remote -a reactivities
+    - in Heroku website:
+        - go to Resources
+            - add-ons: Heroku Postgres (free)
+            - click on the db 
+                - go to settings and see the details (host, db, port, password, uri, cli)
+        - go to Settings
+            - Reveal Config Vars
+            - supply the config variables inside the settings here
+                - key: value:
+                    - DATABASE_URL          | postgres://...
+                    - Cloudinary:ClloudName | value 
+                    - Cloudinary:ApiKey     | value
+                    - Cloudinary:ApiSecret  | value
+                    - TokenKey              | generate strong random password
+                    - ASPNETCORE_ENVIRONMENT | Production
+            - click on Add buildpack
+                - in google search for: "dotnet buildpack"
+                    - https://github.com/jincod/dotnetcore-buildpack
+                    - copy .NET Core edge: heroku buildpacks:set https://github.com/jincod/dotnetcore-buildpack
+                    - paste in in the vscode terminal
+- Deploying the app to Heroku
+    - commit changes to github
+    - git push heroku main
+    - to see logs in heroku: go to the app in heroku and click more -> view logs
+
