@@ -491,3 +491,25 @@ Sec22-Finishing_touches_and_publishing
         - add NWebsec.AspNetCore.Middleware @André N. Klingsheim packgage from nuget gallery to API project
 - Content security policies
 
+
+Sec23-Identity-Cookbook
+~~~~~~~~~~~~~~~~~~~~~~~
+- goals:
+    - Facebook Login
+    - Refresh Tokens
+    - Email Confirmation
+- Setting up Facebook login
+    - npm i @greatsumini/react-facebook-login
+    - https://developers.facebook.com/
+- Adding the Facebook JS SDK
+- Adding the client methods for FB Login
+- Configuring the API endpoint
+- Debugging the Facebook info
+- Redeploying the app to Flyio
+    - in reactivities: fly secrets set Facebook__ApiSecret=MyApiSecret
+    - in clientApp: npm run build
+    - in https://developers.facebook.com/ in fb login settings add localhost:5000 to the two white lists.
+    - dotnet dev-certs https
+        - dotnet dev-certs https --clean
+        - dotnet dev-certs https --trust
+
