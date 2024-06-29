@@ -498,6 +498,7 @@ Sec23-Identity-Cookbook
     - Facebook Login
     - Refresh Tokens
     - Email Confirmation
+
 - Setting up Facebook login
     - npm i @greatsumini/react-facebook-login
     - https://developers.facebook.com/
@@ -512,4 +513,14 @@ Sec23-Identity-Cookbook
     - dotnet dev-certs https
         - dotnet dev-certs https --clean
         - dotnet dev-certs https --trust
+
+- Introduction to Refresh Tokens
+- Adding the Refresh token domain entity
+    - dotnet ef migrations add RefreshTokens -p Persistence -s API
+- Updating the JWT token parameters
+- Updating the account controller
+- Testing in Postman
+- Client side configuration
+- Testing the refresh token in the client
+- Redeploying the app to Flyio
 

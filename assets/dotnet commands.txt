@@ -7,6 +7,7 @@
 - dotnet ef migrations add CommentEntityAdded -p Persistence -s API
 - dotnet ef migrations add FollowingEntityAdded -p Persistence -s API
 - dotnet ef migrations script -o test.sql -p Persistence -s API
+- dotnet ef migrations add RefreshTokens -p Persistence -s API
 - dotnet watch
 - dotnet watch --no-load-reload
 - dotnet new classlib -n Infrastructure

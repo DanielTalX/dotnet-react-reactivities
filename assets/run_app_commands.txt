@@ -16,6 +16,10 @@ npm config set registry https://registry.npmjs.org/
 0. Switching Sqlite <-> PostGresQL:
     a. ApplicationServiceExtensions
     b. appsettings.Development.json
+0. http <-> https:
+    a. API/Properties/launchSettings.json
+    b. client-app/vite.config.ts
+    c. client-app/.env.development
 1. install client
     a. cd Reactivities/client-app
     b. npm i
