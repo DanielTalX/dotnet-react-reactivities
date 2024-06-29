@@ -32,6 +32,7 @@ npm config set registry https://registry.npmjs.org/
 4. build client to production:
     a. cd Reactivities/client-app
     b. npm run build
+    c. update sha256 string in program.cs (only if required)
 4. run production mode (both backend & client)
     a. cd Reactivities/API
     b. dotnet run

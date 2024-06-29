@@ -524,3 +524,24 @@ Sec23-Identity-Cookbook
 - Testing the refresh token in the client
 - Redeploying the app to Flyio
 
+- Introduction to Email verification
+- Setting up SendGrid
+    - https://sendgrid.com/en-us
+    - add SendGrid @Elmer Thomas,Twilio DX Team package from nuget gallery to Infrastructure project
+- Require a confirmed email to sign in 
+- Updating the register method
+- Adding the confirm email endpoint
+- Testing in Postman
+    - https://10minutemail.net/
+- Setting up the client for email confirmation
+- Adding a verify email component
+- Finishing up and testing
+- Redeploying the app to Flyio
+    - add Sengrid__User to fly.toml file
+    - deploy to fly: fly secrets set Sendgrid__Key=SG...
+    - client: npm run build
+    - update sha256 string in program.cs (only if required)
+
+- todo: 
+    - ForgetPassword Feature
+    - fake email verification when not using sendgrid
